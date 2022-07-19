@@ -25,18 +25,18 @@ Registrate en Devstagram
                     <label for="username" class="block uppercase text-gray-700 font-bold">Usuario</label>
                     <input type="text" id="username" name="username" class="block p-3 border focus:border-sky-700 outline-0 w-full rounded bg-white text-gray-800 @error("username")
                     border-red-700 focus:border-sky-700
-                    @enderror" placeholder="Ingresa tu nombre de usuario" autocomplete="off">
+                    @enderror" placeholder="Ingresa tu nombre de usuario" autocomplete="off" value="{{ old("username") }}">
                     @error("username")
-                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("name", "nombre", $message) }}</small>
+                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("username", "usuario", $message) }}</small>
                     @enderror
                 </div>
                 <div class="mb-5">
                     <label for="email" class="block uppercase text-gray-700 font-bold">Correo electrónico</label>
                     <input type="email" id="email" name="email" class="block p-3 border focus:border-sky-700 outline-0 w-full rounded bg-white text-gray-800 @error("email")
                     border-red-700 focus:border-sky-700
-                    @enderror" placeholder="Ingresa tu correo electrónico" autocomplete="off">
+                    @enderror" placeholder="Ingresa tu correo electrónico" autocomplete="off" value="{{ old("email") }}">
                     @error("email")
-                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("name", "nombre", $message) }}</small>
+                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("email", "correo", $message) }}</small>
                     @enderror
                 </div>
                 <div class="mb-5">
@@ -45,17 +45,12 @@ Registrate en Devstagram
                     border-red-700 focus:border-sky-700
                     @enderror" placeholder="Ingresa tu contraseña" autocomplete="off">
                     @error("password")
-                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("name", "nombre", $message) }}</small>
+                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("password", "contraseña", $message) }}</small>
                     @enderror
                 </div>
                 <div class="mb-5">
                     <label for="password_confirmation" class="block uppercase text-gray-700 font-bold">Confirma tu contraseña</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" class="block p-3 border focus:border-sky-700 outline-0 w-full rounded bg-white text-gray-800 @error("password_confirm")
-                    border-red-700 focus:border-sky-700
-                    @enderror" placeholder="Ingresa tu contraseña" autocomplete="off">
-                    @error("password_confirm")
-                        <small class="text-red-700 mt-0 mb-2 block text-right">{{ str_replace("name", "nombre", $message) }}</small>
-                    @enderror
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="block p-3 border focus:border-sky-700 outline-0 w-full rounded bg-white text-gray-800" placeholder="Ingresa tu contraseña" autocomplete="off">
                 </div>
                 <div class="mb-5">
                     <button type="submit" class="text-white bg-sky-600 hover:bg-sky-700 transition-colors p-4 rounded cursor-pointer uppercase font-bold w-full">Crear cuenta</button>
